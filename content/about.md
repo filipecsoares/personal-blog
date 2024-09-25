@@ -2,7 +2,7 @@
 title = 'About'
 description = 'About me'
 date = 2024-09-25T11:05:25-03:00
-draft = true
+draft = false
 +++
 
 I'm Filipe Soares, a Software Developer from Brazil with over 10 years of experience, currently working at Jtech, a software development company of Veolia Group.

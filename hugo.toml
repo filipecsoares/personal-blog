@@ -21,8 +21,8 @@ Feel free to read [about myself](/about) or to look at my [posts](/posts).
 """
 
 # Collection to display on home
-# homeCollectionTitle = 'Posts'
-# homeCollection = 'posts'
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
 
 # Lists parameters
 paginationSize = 100

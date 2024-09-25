@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+<title>
+    
+    Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization | Filipe Soares
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/001-vacuum-analyze/"/>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.1b30d651819daff0be2eb72e29c6d7b1e8846182d31842822600174f4a20be48.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">Filipe Soares</h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/001-vacuum-analyze/">Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-09-25T16:39:51-03:00">September 25, 2024</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <h1 id="vacuum-analyze-in-postgresql-an-essential-tool-for-performance-optimization">Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization</h1>
+<p><code>VACUUM ANALYZE</code> is a command in PostgreSQL used to optimize database performance, particularly by removing obsolete data and updating table statistics.</p>
+<h2 id="understanding-vacuum-analyze">Understanding VACUUM ANALYZE</h2>
+<h3 id="vacuum-space-reclamation">VACUUM: Space Reclamation</h3>
+<p><code>VACUUM</code> is a process that reclaims space occupied by deleted or marked-for-deletion rows. When records are deleted or updated in a PostgreSQL table, the physical space they occupied is still retained by the database and can only be reused for new records after running <code>VACUUM</code>. This helps prevent fragmentation and unnecessary disk space usage.</p>
+<h3 id="analyze-statistics-update">ANALYZE: Statistics Update</h3>
+<p><code>ANALYZE</code> is responsible for updating the statistics of value distribution in table columns. These statistics are used by the query optimizer to decide the best way to execute a query. When the statistics are outdated, the optimizer may make suboptimal decisions, leading to slower queries. <code>ANALYZE</code> resolves this problem by ensuring the optimizer has accurate information about data distribution.</p>
+<h2 id="how-to-use-vacuum-analyze">How to Use VACUUM ANALYZE</h2>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">VACUUM</span> <span style="color:#66d9ef">ANALYZE</span> [<span style="color:#66d9ef">table_name</span>];
+</span></span></code></pre></div><h3 id="execution-on-all-tables">Execution on All Tables</h3>
+<p>If no table name is provided, <code>VACUUM ANALYZE</code> will be executed on all tables in the database.</p>
+<h3 id="execution-on-a-specific-table">Execution on a Specific Table</h3>
+<p>If you want to run <code>VACUUM ANALYZE</code> on a specific table, replace <code>[table_name]</code> with the name of the desired table.</p>
+<h3 id="usage-examples">Usage Examples</h3>
+<ul>
+<li>To execute <code>VACUUM ANALYZE</code> on all tables in the database:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">VACUUM</span> <span style="color:#66d9ef">ANALYZE</span>;
+</span></span></code></pre></div><ul>
+<li>To execute <code>VACUUM ANALYZE</code> on a specific table called <code>my_table</code>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">VACUUM</span> <span style="color:#66d9ef">ANALYZE</span> my_table;
+</span></span></code></pre></div><h3 id="access-privileges">Access Privileges</h3>
+<p>To run <code>VACUUM ANALYZE</code>, you need appropriate database privileges. Typically, superusers or members of the <code>pg_autovacuum</code> group have permission to execute this command.</p>
+<h2 id="additional-considerations">Additional Considerations</h2>
+<h3 id="automatic-scheduling">Automatic Scheduling</h3>
+<p>In production environments, it is common to schedule <code>VACUUM ANALYZE</code> to run periodically as part of a database maintenance routine.</p>
+<h3 id="performance-impact">Performance Impact</h3>
+<p><code>VACUUM ANALYZE</code> can consume significant system resources, especially on large databases. Therefore, it&rsquo;s important to consider the performance impact when scheduling its execution.</p>
+<h3 id="regular-monitoring">Regular Monitoring</h3>
+<p>It is recommended to regularly monitor database size and query performance to determine the appropriate frequency for running <code>VACUUM ANALYZE</code>.</p>
+<hr>
+<p>In summary, <code>VACUUM ANALYZE</code> is an essential tool for maintaining the performance and integrity of a PostgreSQL database, ensuring that space is efficiently used and query statistics are always updated to optimize query execution.</p>
+<hr>
+<p>References:</p>
+<ul>
+<li>VACUUM. Retrieved from <a href="https://www.postgresql.org/docs/13/sql-vacuum.html">https://www.postgresql.org/docs/13/sql-vacuum.html</a></li>
+<li>ANALYZE. Retrieved from <a href="https://www.postgresql.org/docs/13/sql-analyze.html">https://www.postgresql.org/docs/13/sql-analyze.html</a></li>
+</ul>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>
