@@ -1,8 +1,10 @@
-+++
-title = 'Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization'
-date = 2024-09-25T16:39:51-03:00
-draft = false
-+++
+---
+title: 'Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization'
+date: 2024-09-25T16:39:51-03:00
+tags: ['postgresql', 'database']
+autonumber: true
+draft: false
+---
 
 # Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization
 

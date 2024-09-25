@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Filipe Soares</title>
+    <link>http://localhost:1313/tags/database/</link>
+    <description>Recent content in Database on Filipe Soares</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Sep 2024 16:39:51 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization</title>
+      <link>http://localhost:1313/posts/001-vacuum-analyze/</link>
+      <pubDate>Wed, 25 Sep 2024 16:39:51 -0300</pubDate>
+      <guid>http://localhost:1313/posts/001-vacuum-analyze/</guid>
+      <description>&lt;h1 id=&#34;vacuum-analyze-in-postgresql-an-essential-tool-for-performance-optimization&#34;&gt;Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;VACUUM ANALYZE&lt;/code&gt; is a command in PostgreSQL used to optimize database performance, particularly by removing obsolete data and updating table statistics.&lt;/p&gt;&#xA;&lt;h2 id=&#34;understanding-vacuum-analyze&#34;&gt;Understanding VACUUM ANALYZE&lt;/h2&gt;&#xA;&lt;h3 id=&#34;vacuum-space-reclamation&#34;&gt;VACUUM: Space Reclamation&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;VACUUM&lt;/code&gt; is a process that reclaims space occupied by deleted or marked-for-deletion rows. When records are deleted or updated in a PostgreSQL table, the physical space they occupied is still retained by the database and can only be reused for new records after running &lt;code&gt;VACUUM&lt;/code&gt;. This helps prevent fragmentation and unnecessary disk space usage.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
