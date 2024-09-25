@@ -16,8 +16,7 @@ hideHeader = false
 # Intro on main page, content in markdown
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems.
-I am interested in a various topics, including algorithms, distributed systems, databases, and information retrieval. \\
+I'm Filipe Soares from Brazil 🇧🇷, a Software Developer since 2014, currently focused on mastering Microservices architecture, containerization with Docker and Kubernetes, clean code practices, and Web Security. \\
 Feel free to read [about myself](/about) or to look at my [posts](/posts).
 """
 
