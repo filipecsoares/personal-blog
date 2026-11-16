@@ -20,15 +20,15 @@ Write technical posts that explain hard-earned lessons in a **simple, direct, an
 +++
 title = 'Clear, Descriptive Title'
 date = 2026-11-16T12:00:00-03:00
-description = 'One-sentence SEO description for meta tags and social previews.'
-summary = 'One-sentence plain-text summary shown on the home and posts list.'
+description = 'One-sentence factual SEO description of what the post teaches.'
+summary = 'One-sentence direct plain-text summary shown on the home and posts list.'
 tags = ['tag1', 'tag2']
-autonumber = true
+autonumber = false
 draft = false
 +++
 ```
 
-- **Important:** Always fill `summary` with plain text (no Markdown headings) so Hugo does not pull `##` headings into the home page post list.
+- **Important:** Always fill `summary` with plain text (no Markdown headings, and avoid meta phrasing like *"Learn why X exists and what problems it solves"*—state the practical takeaway directly). Keep `autonumber = false` for a cleaner, simpler layout.
 - **No duplicate `<h1>`:** Never add `# Title` at the top of the Markdown body; the `typo` theme renders `title` as `<h1>`. Start sections at `##`.
 
 ## 2. Mandatory Post Structure
