@@ -19,7 +19,7 @@ hideHeader = false
 # Intro on main page, content in markdown
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-I'm Filipe Soares, a Software Developer from Brazil. \\
+I'm Filipe Soares, a Software Architect from Brazil. \\
 I write about Software Architecture, Microservices, Containers, Databases, and Web Security. \\
 Read more [about me](/about) or browse my [posts](/posts).
 """
