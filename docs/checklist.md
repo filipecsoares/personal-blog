@@ -22,7 +22,7 @@ Roadmap to bring the personal blog up to a professional, automated, and maintain
 
 ## 4. Content & Editorial Standards
 - [x] Fix typo in `content/about.md` (`"eading"` -> `"reading"`).
-- [ ] Update `content/about.md` bio to reflect current experience, role, and focus areas.
+- [x] Update `content/about.md` bio to reflect current experience, role, and focus areas.
 - [x] Standardize frontmatter format across `archetypes/default.md`, `content/about.md`, and `content/posts/*` (TOML `+++`).
 - [x] Enrich `archetypes/default.md` with `description`, `tags`, and `autonumber` fields.
 - [x] Remove the duplicate `# H1` heading in `content/posts/001-vacuum-analyze.md` and add a `description` field to its frontmatter.
