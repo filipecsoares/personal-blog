@@ -4,6 +4,6 @@ date = {{ .Date }}
 description = ''
 summary = ''
 tags = []
-autonumber = true
+autonumber = false
 draft = true
 +++
