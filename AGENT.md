@@ -23,12 +23,14 @@ This document defines the architecture, conventions, and rules for AI agents wor
 
 ## 3. Content & Editorial Standards
 
-1. **Language & Tone:** Clear, professional technical English. Proofread for grammar and typos.
-2. **Frontmatter Consistency:** Use a single frontmatter format across all content files (prefer **TOML `+++`** to match `hugo.toml` and `archetypes/default.md`, or standardize consistently across the repo).
-3. **No Duplicate `<h1>`:** Do not repeat the post `title` as a `# Heading` at the top of the Markdown body; the theme renders `title` as `<h1>`. Start article sections at `##`.
-4. **SEO & Metadata:** Every post should include `title`, `date`, `description` (or `summary`), `tags`, and `draft` in frontmatter.
+For writing or reviewing blog posts, always load and follow the workspace skill [write-blog-post](.agents/skills/write-blog-post/SKILL.md).
+
+1. **Language & Tone:** Clear, simple, direct, and practical technical English. Proofread for grammar and typos.
+2. **Post Structure:** Every post must cover: **Why It Exists**, **The Problem It Solves**, **How It Is Used**, **Practical Examples**, and **Best Practices** (plus **References**).
+3. **Frontmatter Consistency:** Use **TOML `+++`** across all content files (`title`, `date`, `description`, `summary`, `tags`, `autonumber`, `draft`). Always set a plain-text `summary`.
+4. **No Duplicate `<h1>`:** Do not repeat the post `title` as a `# Heading` at the top of the Markdown body; the theme renders `title` as `<h1>`. Start article sections at `##`.
 5. **Post Naming:** Use descriptive, URL-friendly kebab-case filenames in `content/posts/` (e.g., `001-vacuum-analyze.md` or `slug-name.md`).
-6. **Citations & Code:** Include runnable/accurate code snippets with language tags on fenced code blocks and cite official documentation/references at the end when applicable.
+6. **Citations & Code:** Include accurate, runnable code snippets with language tags on fenced code blocks and cite official documentation at the end.
 
 ## 4. Git & Build Hygiene
 
