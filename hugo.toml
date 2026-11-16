@@ -1,7 +1,8 @@
-baseURL = 'https://filipecsoares.github.io'
+baseURL = 'https://filipecsoares.github.io/'
 languageCode = 'en-us'
 title = 'Filipe Soares'
 theme = 'typo'
+enableRobotsTXT = true
 
 [taxonomies]
 tag = 'tags'
