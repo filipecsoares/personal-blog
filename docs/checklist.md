@@ -6,7 +6,7 @@ Roadmap to bring the personal blog up to a professional, automated, and maintain
 - [x] Initialize `themes/typo` submodule (`git submodule update --init --recursive`) and update it to the latest compatible version.
 - [x] Fix the `public` submodule inconsistency: remove `public` entry from `.gitmodules` and remove `public/` and `.hugo_build.lock` from Git tracking (`git rm -r --cached public .hugo_build.lock`).
 - [x] Update `.gitignore` to ignore `public/`, `resources/_gen/`, `.hugo_build.lock`, OS files (`.DS_Store`, `Thumbs.db`), and editor temp files.
-- [ ] Pin the Hugo Extended version in CI workflow (`0.145.0` configured) and install Hugo Extended locally for previewing.
+- [x] Pin the Hugo Extended version in CI workflow (`0.145.0` configured) and install Hugo Extended locally for previewing.
 
 ## 2. CI/CD & Automated Deployment
 - [x] Create `.github/workflows/deploy.yml` to build the site with `hugo --minify` on push to `main`.
@@ -18,7 +18,7 @@ Roadmap to bring the personal blog up to a professional, automated, and maintain
 - [x] Add trailing slash to `baseURL = 'https://filipecsoares.github.io/'`.
 - [x] Enable `enableRobotsTXT = true`.
 - [x] Verify Open Graph (`og:*`) and canonical URL support (provided natively by the updated `themes/typo` `head.html` and `opengraph.html` partials).
-- [ ] Run `hugo --minify` locally or in CI to verify compatibility of all `hugo.toml` parameters, RSS feed (`/index.xml`), and `sitemap.xml` with Hugo `0.145.0` and updated `typo`.
+- [x] Run `hugo --minify` locally or in CI to verify compatibility of all `hugo.toml` parameters, RSS feed (`/index.xml`), and `sitemap.xml` with Hugo `0.145.0` and updated `typo`.
 
 ## 4. Content & Editorial Standards
 - [x] Fix typo in `content/about.md` (`"eading"` -> `"reading"`).
