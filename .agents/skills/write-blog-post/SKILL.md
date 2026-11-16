@@ -54,3 +54,4 @@ End with **`## References`** linking to official documentation or primary source
 
 1. Run `make build` (`hugo --minify`) and confirm zero errors or warnings.
 2. Check the generated entry in `public/index.html` and the post page to confirm clean formatting and summary rendering.
+
