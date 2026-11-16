@@ -12,13 +12,16 @@ tag = 'tags'
 description = "A tech-oriented personal blog by Filipe Soares."
 
 # Appearance settings
+theme = 'dark'
+colorPalette = 'base16-ocean'
 hideHeader = false
 
 # Intro on main page, content in markdown
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-I'm Filipe Soares from Brazil 🇧🇷, a Software Developer since 2014, currently focused on mastering Microservices architecture, containerization with Docker and Kubernetes, clean code practices, and Web Security. \\
-Feel free to read [about myself](/about) or to look at my [posts](/posts).
+I'm Filipe Soares, a Software Developer from Brazil. \\
+I write about Software Architecture, Microservices, Containers, Databases, and Web Security. \\
+Read more [about me](/about) or browse my [posts](/posts).
 """
 
 # Collection to display on home
@@ -26,9 +29,13 @@ homeCollectionTitle = 'Posts'
 homeCollection = 'posts'
 
 # Lists parameters
-paginationSize = 100
+paginationSize = 20
 listSummaries = true
 listDateFormat = '02 Jan 2006'
+
+# Article metadata
+readTime = true
+showTags = true
 
 # Breadcrumbs
 [params.breadcrumbs]
