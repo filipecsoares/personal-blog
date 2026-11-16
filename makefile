@@ -1,22 +1,17 @@
-push_blog: 
-	git add . && git commit -m "refactor: simple update" && git push
+.PHONY: run build clean new-post update-theme
 
-rebuild_public: 
-	make clean_public && hugo --minify
-
-clean_public: 
-	rm -r public/*
-
-push_public: 
-	make rebuild_public && cd public && git add . && git commit -m "feat: update site" && git push
-
-push_theme:
-	cd themes/typo && git add . && git commit -m "$(m)" && git push
-
-all: 
-	- make push_theme
-	- make push_public
-	make push_blog
-
-run: 
+run:
 	hugo server --disableFastRender -D
+
+build:
+	hugo --minify
+
+clean:
+	rm -rf public resources/_gen
+
+new-post:
+	@test -n "$(name)" || (echo "Usage: make new-post name=my-post-slug" && exit 1)
+	hugo new content/posts/$(name).md
+
+update-theme:
+	git submodule update --remote --merge themes/typo
