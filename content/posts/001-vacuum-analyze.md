@@ -1,10 +1,10 @@
 +++
 title = 'Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization'
 date = 2024-09-25T16:39:51-03:00
-description = 'Learn why PostgreSQL VACUUM ANALYZE exists, what problems it solves, how to use it, and practical best practices.'
-summary = 'Why VACUUM ANALYZE exists, what problems it solves, how to use it, and practical best practices.'
+description = 'Keep PostgreSQL tables clean and query plans fast by reclaiming dead tuples and updating planner statistics.'
+summary = 'Reclaim dead tuple space and update planner statistics to keep PostgreSQL queries fast.'
 tags = ['postgresql', 'database']
-autonumber = true
+autonumber = false
 draft = false
 +++
 
