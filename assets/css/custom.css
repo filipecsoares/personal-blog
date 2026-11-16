@@ -1,0 +1,51 @@
+/* Minimalist editorial refinements */
+
+:root {
+  --main-width: 720px;
+  --p-line-height: 1.65em;
+  --code-border-radius: 8px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle, readable links */
+main a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s ease;
+}
+
+main a:hover {
+  opacity: 0.78;
+}
+
+/* Refined blockquotes */
+blockquote {
+  border-left: 2px solid var(--content-secondary-dark);
+  padding-left: 1.1rem;
+  margin-left: 0;
+  color: var(--content-secondary-dark);
+  font-style: italic;
+}
+
+/* Cleaner horizontal rules */
+hr {
+  border: 0;
+  border-top: 1px solid var(--code-border-dark);
+  margin: 2.2rem 0;
+  opacity: 0.6;
+}
+
+/* Post list spacing */
+.post-line {
+  padding-bottom: 0.5rem;
+}
+
+.post-line .line-description {
+  color: var(--content-secondary-dark);
+  font-size: 0.92em;
+  margin-top: 0.2rem;
+}
