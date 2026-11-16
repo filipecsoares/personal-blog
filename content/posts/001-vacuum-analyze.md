@@ -1,12 +1,11 @@
----
-title: 'Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization'
-date: 2024-09-25T16:39:51-03:00
-tags: ['postgresql', 'database']
-autonumber: true
-draft: false
----
-
-# Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization
++++
+title = 'Vacuum Analyze in PostgreSQL: An Essential Tool for Performance Optimization'
+date = 2024-09-25T16:39:51-03:00
+description = 'Learn how PostgreSQL VACUUM ANALYZE reclaims dead tuple space and updates planner statistics to keep queries fast.'
+tags = ['postgresql', 'database']
+autonumber = true
+draft = false
++++
 
 `VACUUM ANALYZE` is a command in PostgreSQL used to optimize database performance, particularly by removing obsolete data and updating table statistics.
 
