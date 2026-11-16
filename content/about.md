@@ -1,12 +1,22 @@
 +++
 title = 'About'
-description = 'About me'
+description = 'Software Architect at Koopere. Writing about architecture, distributed systems, and engineering.'
 date = 2024-09-25T11:05:25-03:00
 draft = false
 +++
 
-I'm Filipe Soares, a Software Developer from Brazil with over 10 years of experience, currently working at Jtech, a software development company of Veolia Group.
+Software Architect at **Koopere**, building software since 2014.
 
-My career began in 2014, where I worked with Java, PostgreSQL, and various web technologies. Over the years, I’ve grown proficient in developing systems, improving performance, and solving complex problems using modern methodologies. I hold an MBA in Software Architecture and am currently pursuing a postgraduate degree in Applied Mathematics for computer science.
+I focus on Software Architecture, Microservices, Docker, Kubernetes, Clean Code, and Web Security. Outside of work, I enjoy reading books on technology, science, and fiction.
 
-My focus areas of study include Microservices architecture, containerization with Docker, Kubernetes, and Web Security, as I constantly strive to improve my skills in technology. Outside of work, I enjoy reading books on technology, science and fiction.
+## Education
+
+- **Postgraduate in Mathematics Oriented to Algorithms and Data Structures** — Faculdade Focus *(in progress)*
+- **Postgraduate in Technical Leadership** — Full Cycle
+- **Postgraduate in Software Architecture** — IGTI
+- **Systems Analysis and Development** — USJ
+
+## Links
+
+- **GitHub:** [github.com/filipecsoares](https://github.com/filipecsoares) — Code, experiments, and open-source projects.
+- **LinkedIn:** [linkedin.com/in/filipe-soares-897a2151](https://www.linkedin.com/in/filipe-soares-897a2151/)
